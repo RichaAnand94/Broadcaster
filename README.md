@@ -7,7 +7,6 @@ Broadcaster is a platform where every citizen can bring any form of corruption t
 - Installation
 - Testing
 - Features
-- API Documentation
 - Questions
 - License
 
