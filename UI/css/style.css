@@ -31,6 +31,12 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 0;
 	color:#000;
 }
+h4 {
+	color: #a64bf4;
+}
+h3 {
+	color: #a64bf4;
+}
 html, header, nav, figure, figcaption, fieldset, aside, article, section, footer, form, legend, ul, ol, div {
 	display: block;
 }
@@ -150,7 +156,9 @@ header {
 	font-family: 'Poppins', sans-serif;
 	font-weight:600;
 	font-size: 30px;
-	color: #333333;
+	color: #a64bf4;
+	font-style: italic;
+
 }
 .login_wrap {
 	max-width:450px;
@@ -165,6 +173,25 @@ header {
 	-webkit-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
 	-o-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
 	-ms-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+}
+.login_wrap100 {
+	max-width:650px;
+	width:50%;
+	float: right;
+	margin:0 auto;
+	background: #fff;
+	border-radius: 10px;
+	overflow: hidden;
+	padding: 65px 55px 33px 55px;
+	box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+	-o-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+	-ms-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+}
+.left_logo {
+	width: 50%;
+	float: left;
 }
 legend.login_head {
 	display: block;
@@ -312,11 +339,11 @@ input:focus, select:focus, textarea:focus {
 	font-size:1.8em;
 	float:left;
 	font-weight:600;
-	color:#333;
+	color:#a64bf4;
 	padding:5px 0;
 }
 .crt {
-	aligne:center;
+	align: center;
 }
 .btn {
 	background-color: DodgerBlue;
@@ -430,9 +457,11 @@ background-color:#f1f1f1
 }
 .ta-table-all a.edit {
 	color:#00CC00;
+	font-size: x-large;
 }
 .ta-table-all a.delete {
 	color: #FF0000;
+	font-size: x-large;
 }
 .leftbtn{ float:left; width:40%; text-align:center;}
 .rightbtn{ float:left; width:30%;}
