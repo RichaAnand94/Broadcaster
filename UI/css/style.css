@@ -37,6 +37,9 @@ h4 {
 h3 {
 	color: #a64bf4;
 }
+h2{
+	color: #a64bf4;
+}
 html, header, nav, figure, figcaption, fieldset, aside, article, section, footer, form, legend, ul, ol, div {
 	display: block;
 }
