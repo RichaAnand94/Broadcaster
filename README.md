@@ -2,30 +2,34 @@
 Broadcaster is a platform where every citizen can bring any form of corruption to the notice of appropriate authorities and the general public.
 
 ## Table of Content
-- Getting Started
-- Technologies Used
-- Installation
-- Testing
-- Features
-- Questions
-- License
 
+ * [Getting Started](#getting-started)
+ * [Technologies Used](#technologies-used)
+ * [Installation](#installation)
+ * [Testing](#testing)
+ * [Features](#features)
+ * [Questions](#questions)
 
 ## Getting Started
 
-This is a javascript application written in `ECMASCRIPT 6` and built with `Express` framework on the `NodeJS` platform. Codes are written in accordance with `Airbnb` JavaScript style guide. Authentication of users is done via `JSON Web Tokens`.
+This is a javascript application written in [ECMASCRIPT 6](https://en.wikipedia.org/wiki/ECMAScript) and built with [**Express**](https://expressjs.com/) framework on the [**NodeJS**](https://nodejs.org/en/) platform. Codes are written in accordance with [Airbnb](https://github.com/airbnb/javascript) JavaScript style guide. Authentication of users is done via [**JSON Web Tokens**](https://jwt.io/).
 
 ## Technologies Used
 
-###### UI & Templates
+**UI & Templates**
 
 1. HTML & CSS
 2. Javascript
 
-###### Server Side
+**Server Side**
 
 1. NodeJS
 2. Express
+
+**Dependencies**
+* Postgres
+* Node
+
 
 ## Features
 Broadcaster App consists of the following features:
@@ -56,6 +60,10 @@ Broadcaster App consists of the following features:
 - Admins can approve a new/pending/disapproved request
 - Admins can disapprove a new/pending/ request
 - Admins can resolve a pending/disapproved request
+
+## Questions
+For more details contact richamee@gmail.com
+
 
 
 
