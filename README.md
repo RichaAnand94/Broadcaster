@@ -2,18 +2,20 @@
 Broadcaster is a platform where every citizen can bring any form of corruption to the notice of appropriate authorities and the general public.
 
 ## Table of Content
-- Getting Started
-- Technologies Used
-- Installation
-- Testing
-- Features
-- Questions
-- License
+
+ * Getting Started
+ * Technologies Used
+ * Installation
+ * Testing
+ * Features
+ * API Documentation
+ * Questions
+ * License
 
 
 ## Getting Started
 
-This is a javascript application written in `ECMASCRIPT 6` and built with `Express` framework on the `NodeJS` platform. Codes are written in accordance with `Airbnb` JavaScript style guide. Authentication of users is done via `JSON Web Tokens`.
+This is a javascript application written in [ECMASCRIPT 6](https://en.wikipedia.org/wiki/ECMAScript) and built with `Express` framework on the `NodeJS` platform. Codes are written in accordance with `Airbnb` JavaScript style guide. Authentication of users is done via `JSON Web Tokens`.
 
 ## Technologies Used
 
