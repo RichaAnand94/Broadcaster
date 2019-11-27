@@ -27,7 +27,7 @@ This is a javascript application written in [ECMASCRIPT 6](https://en.wikipedia.
 2. Express
 
 **Dependencies**
-* Postgres
+
 * Node
 
 
@@ -54,6 +54,9 @@ Broadcaster App consists of the following features:
 - Authenticated Users can delete a specific request
 - Authenticated Users can view their account details
 - Authenticated Users can edit their account details
+- Authenticated Users can add images of the requests
+- Authenticated Users can add videos of the requests
+- Authenticated Users can add location of the requests
 
 ## Admin Users
 - Admins can view all requests
