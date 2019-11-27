@@ -1,6 +1,6 @@
-var fs = require('fs');
+import fs from 'fs';
 
-var users = require('../../../public/users.json');
+import users from '../../../public/users.json';
 
 class User {
 
@@ -39,4 +39,4 @@ class User {
         });
     }
 }
-module.exports = new User();
+export default new User();
