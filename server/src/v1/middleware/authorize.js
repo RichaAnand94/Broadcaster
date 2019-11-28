@@ -30,3 +30,13 @@ exports.authorizeUser = function (req, res, next) {
         return res.status(401).send({ 'status': 401, 'error': 'Authentication failed' });
     }
 };
+
+exports.authorizeAdmin = function (req, res, next) {
+    const userData = decodeToken(req.headers.token);
+    if (userData && userData.role == 'admin') {
+        req.headers.userId = userData.id;
+        return next();
+    } else {
+        return res.status(401).send({ 'status': 401, 'error': 'Authentication failed' });
+    }
+};

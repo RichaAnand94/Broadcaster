@@ -33,6 +33,13 @@ class Incident {
         return incidents;
     }
 
+     findAllByAdmin(type) {
+        const incidents = this.incidents.filter(function (incident, index, arr) {
+            return incident.type == type;
+        });
+        return incidents;
+    }
+
     update(id, params) {
         this.incidents.filter(function (incident, index, arr) {
             if (incident.id == id) {
