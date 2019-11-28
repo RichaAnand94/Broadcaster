@@ -1,0 +1,73 @@
+[
+    {
+        "id": 1,
+        "status": "pending",
+        "createdOn": "2019-11-22T09:36:59.637Z",
+        "comment": "Comment1",
+        "location": "lat, long",
+        "images": [
+            "Image1",
+            "Image2"
+        ],
+        "videos": [
+            "Video1",
+            "Video2"
+        ],
+        "createdBy": 2,
+        "type": "red-flag"
+    },
+    {
+        "id": 2,
+        "status": "pending",
+        "createdOn": "2019-11-22T09:37:02.763Z",
+        "title": "Title",
+        "comment": "Comment2",
+        "location": "lat, long",
+        "images": [
+            "Image1",
+            "Image2"
+        ],
+        "videos": [
+            "Video1",
+            "Video2"
+        ],
+        "createdBy": 2,
+        "type": "red-flag"
+    },
+    {
+        "id": 3,
+        "status": "pending",
+        "createdOn": "2019-11-22T09:37:03.532Z",
+        "title": "Title",
+        "comment": "Comment3",
+        "location": "lat, long",
+        "images": [
+            "Image1",
+            "Image2"
+        ],
+        "videos": [
+            "Video1",
+            "Video2"
+        ],
+        "createdBy": 2,
+        "type": "red-flag"
+    },
+    {
+        "id": 4,
+        "status": "pending",
+        "createdOn": "2019-11-22T09:37:04.182Z",
+        "title": "Title",
+        "comment": "Comment4",
+        "location": "lat, long",
+        "images": [
+            "Image1",
+            "Image2"
+        ],
+        "videos": [
+            "Video1",
+            "Video2"
+        ],
+        "createdBy": 2,
+        "type": "red-flag"
+    }
+]
