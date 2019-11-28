@@ -1,7 +1,7 @@
 import UserModel from '../models/User';
 import { generateToken } from '../middleware/authorize';
 
-const signUp = function (req, res) {
+const signUp = (req, res)=> {
     if (!req.body.firstname || !req.body.lastname || !req.body.email || !req.body.phoneNumber || !req.body.password) {
         return res.status(401).send({ 'status': 401, 'error': 'All fields are required' })
     } else if (!UserModel.checkForPropertyExistence('email', req.body.email)) {
@@ -18,7 +18,7 @@ const signUp = function (req, res) {
         return res.status(401).send({ 'status': 401, 'error': 'Email already exists' })
     }
 }
-const signIn = function (req, res) {
+const signIn =  (req, res)=> {
     if (!req.body.email || !req.body.password) {
         return res.status(401).send({ 'status': 401, 'error': 'All fields are required' })
     } else {

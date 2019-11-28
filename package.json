@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha --require @babel/register ./server/test/user.spec.js",
+    "test": "./node_modules/.bin/mocha --require @babel/register ./server/test/**.spec.js --testTimeout=10000 --detectOpenHandles --forceExit ",
     "clean": "rimraf ./dist/",
     "build": "babel server.js -d dist",
     "serve": "nodemon --exec babel-node server.js",
