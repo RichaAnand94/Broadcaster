@@ -9,7 +9,8 @@
     "build": "babel server.js -d dist",
     "serve": "nodemon --exec babel-node server.js",
     "start": "babel-node -- server.js",
-    "lints": "eslint./"
+    "lints": "eslint./",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
   },
   "author": "",
   "license": "ISC",
@@ -21,6 +22,7 @@
     "@babel/runtime": "^7.7.2",
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
+    "coveralls": "^3.0.9",
     "esm": "^3.2.25",
     "express": "^4.17.1",
     "fs": "0.0.1-security",
