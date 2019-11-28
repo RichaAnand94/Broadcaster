@@ -1,4 +1,4 @@
-var jwt = require('jsonwebtoken');
+import jwt from 'jsonwebtoken';
 
 var secretKey = '6416c857-2140-4e79-953e-78e7769f7090';
 
