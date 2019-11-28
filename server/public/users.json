@@ -1,1 +1,1 @@
-[{"id":1,"role":"admin","createdOn":"2019-11-14T08:53:48.495Z","firstname":"admin","lastname":"admin","email":"admin@broadcaster.com","phoneNumber":"9876543210","password":"admin"}]
+[{"id":1,"role":"admin","createdOn":"2019-11-14T08:53:48.495Z","firstname":"admin","lastname":"admin","email":"admin@broadcaster.com","phoneNumber":"9876543210","password":"admin"},{"id":2,"role":"user","createdOn":"2019-11-28T13:40:31.318Z","firstname":"ttt","lastname":"ccc","email":"hhh@gmail.com","phoneNumber":"565656","password":"ddd"}]
