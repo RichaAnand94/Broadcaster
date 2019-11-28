@@ -18,4 +18,18 @@ const signUp = function (req, res) {
         return res.status(401).send({ 'status': 401, 'error': 'Email already exists' })
     }
 }
-export default signUp;
+const signIn = function (req, res) {
+    if (!req.body.email || !req.body.password) {
+        return res.status(401).send({ 'status': 401, 'error': 'All fields are required' })
+    } else {
+        const userData = Object.assign({}, UserModel.findOne('email', req.body.email));
+        if (!userData || userData.password !== req.body.password) {
+            return res.status(401).send({ 'status': 401, 'error': 'Invalid credentials' })
+        } else {
+            delete userData.password;
+            const token = generateToken(userData);
+            return res.status(200).send({ 'status': 200, 'message': 'User logged in successfully', data: { 'token': token } })
+        }
+    }
+}
+export {signUp, signIn};

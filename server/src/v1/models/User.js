@@ -21,6 +21,10 @@ class User {
         this.updateUsersData();
         return newUser;
     }
+    
+    findOne(key, value) {
+        return this.users.find(user => user[key] === value);
+    }
 
     checkForPropertyExistence(key, value) {
         if (users.length > 0 && this.users.find(user => user[key] === value)) {
