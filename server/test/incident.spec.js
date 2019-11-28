@@ -10,7 +10,7 @@ chai.use(chaiHttp);
 
 let userToken;
 
-describe('API endpoint /red-flags', () => {
+describe('API endpoint /red-flags & /interventions', () => {
 
     before((done) => {
         chai.request(server)
@@ -87,6 +87,84 @@ describe('API endpoint /red-flags', () => {
     it('need to get error while updating red-flags comment with out passing comment', (done) => {
         chai.request(server)
             .patch('/api/v1/red-flags/1/comment')
+            .set('token', `${userToken}`)
+            .send({})
+            .then((res) => {
+                expect(res).to.have.status(401);
+                expect(res.body).to.be.an('object');
+                expect(res.body.error).to.equal('Missing mandatory fields');
+                done();
+            }).catch(done);
+    });
+
+
+
+
+    it('need to give all mandatory fields for posting interventions', (done) => {
+        chai.request(server)
+            .post('/api/v1/interventions')
+            .set('token', `${userToken}`)
+            .send(incidents[0])
+            .then((res) => {
+                expect(res).to.have.status(401);
+                expect(res.body).to.be.an('object');
+                expect(res.body.error).to.equal('Missing mandatory fields');
+                done();
+            }).catch(done);
+    });
+
+    it('need to get array while retrieving interventions', (done) => {
+        chai.request(server)
+            .get('/api/v1/interventions')
+            .set('token', `${userToken}`)
+            .then((res) => {
+                expect(res).to.have.status(200);
+                expect(res.body).to.be.an('object');
+                expect(res.body.data).to.be.an('array');
+                done();
+            }).catch(done);
+    });
+
+    it('need to get error without token for interventions', (done) => {
+        chai.request(server)
+            .get('/api/v1/interventions')
+            .set('token', '')
+            .then((res) => {
+                expect(res).to.have.status(401);
+                expect(res.body).to.be.an('object');
+                expect(res.body.error).to.equal('Authentication failed');
+                done();
+            }).catch(done);
+    });
+
+    it('need to get error while retrieving intervention based on wrong id', (done) => {
+        chai.request(server)
+            .get('/api/v1/interventions/id')
+            .set('token', `${userToken}`)
+            .then((res) => {
+                expect(res).to.have.status(401);
+                expect(res.body).to.be.an('object');
+                expect(res.body.error).to.equal('No data found for id: id');
+                done();
+            }).catch(done);
+    });
+
+    it('need to get error while updating intervention location with out passing location', (done) => {
+        chai.request(server)
+            .patch('/api/v1/interventions/1/location')
+            .set('token', `${userToken}`)
+            .send({})
+            .then((res) => {
+                expect(res).to.have.status(401);
+                expect(res.body).to.be.an('object');
+                expect(res.body.error).to.equal('Missing mandatory fields');
+                done();
+            }).catch(done);
+    });
+
+    it('need to get error while updating intervention comment with out passing comment', (done) => {
+        chai.request(server)
+            .patch('/api/v1/interventions/1/comment')
             .set('token', `${userToken}`)
             .send({})
             .then((res) => {
