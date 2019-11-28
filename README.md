@@ -1,7 +1,7 @@
 # Broadcaster-A Solution for Corruption
 Broadcaster is a platform where every citizen can bring any form of corruption to the notice of appropriate authorities and the general public.
 
-[![Build Status](https://travis-ci.org/RichaAnand94/Broadcaster.svg?branch=develop)](https://travis-ci.org/RichaAnand94/Broadcaster)
+[![Build Status](https://travis-ci.org/RichaAnand94/Broadcaster.svg?branch=develop)](https://travis-ci.org/RichaAnand94/Broadcaster)[![Coverage Status](https://coveralls.io/repos/github/RichaAnand94/Broadcaster/badge.svg?branch=develop)](https://coveralls.io/github/RichaAnand94/Broadcaster?branch=develop)
 
 ## Table of Content
 
