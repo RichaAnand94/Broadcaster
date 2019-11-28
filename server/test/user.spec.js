@@ -7,7 +7,7 @@ import users from './mock-data/users.json';
 
 chai.use(chaiHttp);
 
-describe('API endpoint /auth/signup', () => {
+describe('API endpoint /auth/signup, /auth/signin', () => {
     before(() => { });
 
     after(() => { });
