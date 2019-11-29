@@ -4,14 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha --require @babel/register ./server/test/**.spec.js --exit",
+    "test": "nyc --reporter=html --reporte=text mocha --require @babel/register ./server/test/**.spec.js --exit",
     "clean": "rimraf ./dist/",
     "build": "babel server.js -d dist",
     "serve": "nodemon --exec babel-node server.js",
     "start": "babel-node -- server.js",
     "lints": "eslint./",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
-    "local:coveralls": "nyc npm run test && nyc report --reporter=text-lcov | coveralls"
+    "local:coveralls": "nyc npm test && nyc report --reporter=text-lcov | coveralls"
   },
   "author": "",
   "license": "ISC",
@@ -29,13 +29,13 @@
     "fs": "0.0.1-security",
     "jsonwebtoken": "^8.5.1",
     "mocha": "^6.2.2",
-    "nodemon": "^2.0.1",
-    "nyc": "^14.1.1"
+    "nodemon": "^2.0.1"
   },
   "devDependencies": {
     "babel-preset-airbnb": "^4.1.0",
     "babel-preset-env": "^1.7.0",
     "babel-watch": "2.0.7",
-    "eslint": "^6.7.1"
+    "eslint": "^6.7.1",
+    "nyc": "^14.1.1"
   }
 }
