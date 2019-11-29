@@ -10,7 +10,9 @@
     "serve": "nodemon --exec babel-node server.js",
     "start": "babel-node -- server.js",
     "lints": "eslint./",
-    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "local:coveralls": "nyc npm run test && nyc report --reporter=text-lcov | coveralls"
+
   },
   "author": "",
   "license": "ISC",
