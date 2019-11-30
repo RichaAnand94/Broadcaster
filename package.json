@@ -6,7 +6,6 @@
   "scripts": {
     "test": "nyc --reporter=html --reporte=text mocha --require @babel/register ./server/test/**.spec.js --exit",
     "clean": "rimraf ./dist/",
-    "build": "babel server.js -d dist",
     "serve": "nodemon --exec babel-node server.js",
     "start": "babel-node -- server.js",
     "lints": "eslint./",
