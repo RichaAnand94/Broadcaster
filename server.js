@@ -4,7 +4,7 @@ import router from './server/src/v1/routes/userRoute';
 import incident from './server/src/v1/routes/incident.route';
 import admin from './server/src/v1/routes/admin.route';
 
-const port = 3001;
+const port = process.env.PORT || 3001;
 const app = express();
 app.use(express.json());
 
