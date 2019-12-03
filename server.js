@@ -1,4 +1,5 @@
 import express from 'express';
+import './server/src/v2/models/db';
 
 import router from './server/src/v1/routes/userRoute';
 import incident from './server/src/v1/routes/incident.route';
