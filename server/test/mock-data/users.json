@@ -3,14 +3,14 @@
         "firstname": "admin",
         "lastname": "admin",
         "email": "admin@broadcaster.com",
-        "phoneNumber": "9876543210",
+        "phone_number": "9876543210",
         "password": "admin"
     },
     {
         "firstname": "test-user1",
         "lastname": "test-user1",
         "email": "test-user1@gmail.com",
-        "phoneNumber": "9876543210",
+        "phone_number": "9876543210",
         "password": "password"
     },
     {
