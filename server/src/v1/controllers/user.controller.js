@@ -2,10 +2,10 @@ import UserModel from '../models/User';
 import { generateToken } from '../middleware/authorize';
 
 const signUp = (req, res)=> {
-    if (!req.body.firstname || !req.body.lastname || !req.body.email || !req.body.phoneNumber || !req.body.password) {
+    if (!req.body.firstname || !req.body.lastname || !req.body.email || !req.body.phone_number || !req.body.password) {
         return res.status(401).send({ 'status': 401, 'error': 'All fields are required' })
     } else if (!UserModel.checkForPropertyExistence('email', req.body.email)) {
-        if (!UserModel.checkForPropertyExistence('phoneNumber', req.body.phoneNumber)) {
+        if (!UserModel.checkForPropertyExistence('phone_number', req.body.phone_number)) {
             const userData = Object.assign({}, UserModel.create(req.body));
             delete userData.password;
             const token = generateToken(userData)
