@@ -59,19 +59,6 @@ describe('API endpoints /v2/red-flags & /v2/interventions', () => {
             }).catch(done);
     });
 
-   /* it('need to get error while retrieving red-flag based on wrong id', (done) => {
-        chai.request(server)
-            .get('/api/v2/red-flags/1000')
-            .set('token', `${userToken}`)
-            .then((res) => {
-                expect(res).to.have.status(401);
-                expect(res.body).to.be.an('object');
-                expect(res.body.error).to.equal('No data found for id: id');
-                done();
-            }).catch(done);
-    });
-    */
-
     it('need to get error while updating red-flags location with out passing location', (done) => {
         chai.request(server)
             .patch('/api/v2/red-flags/1/location')
