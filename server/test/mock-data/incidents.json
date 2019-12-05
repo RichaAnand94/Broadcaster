@@ -13,7 +13,7 @@
             "Video1",
             "Video2"
         ],
-        "createdBy": 2,
+        "created_by": 2,
         "type": "red-flag"
     },
     {
@@ -31,7 +31,7 @@
             "Video1",
             "Video2"
         ],
-        "createdBy": 2,
+        "created_by": 2,
         "type": "red-flag"
     },
     {
@@ -49,7 +49,7 @@
             "Video1",
             "Video2"
         ],
-        "createdBy": 2,
+        "created_by": 2,
         "type": "red-flag"
     },
     {
@@ -67,7 +67,7 @@
             "Video1",
             "Video2"
         ],
-        "createdBy": 2,
+        "created_by": 2,
         "type": "red-flag"
     }
 ]
