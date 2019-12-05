@@ -26,7 +26,7 @@ class Incident {
         const sql = format('SELECT * FROM incidents WHERE %I = $1', key);
         const res = await client.query(sql, [value]);
         return res.rows[0];
-    }
+    }   
 
     async findAll(type, created_by) {
         const sql = format('SELECT * FROM incidents WHERE type = $1 AND created_by = $2');

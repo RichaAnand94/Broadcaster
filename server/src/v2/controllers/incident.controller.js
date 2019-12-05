@@ -82,15 +82,6 @@ const deleteRedFlag = async (req, res) => {
 
 }
 
-
-
-
-
-
-
-
-
-
 const createIntervention = async (req, res) => {
     if (!req.body.title || !req.body.comment || !req.body.location) {
         return res.status(401).send({ 'status': 401, error: 'Missing mandatory fields' })
