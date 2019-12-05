@@ -24,20 +24,6 @@ describe('API endpoints /v1/auth/signup & /v1/auth/signin', () => {
             }).catch(done);
     });
 
-   /* it('should not signup with existing phone number', (done) => {
-        chai.request(server)
-            .post('/api/v1/auth/signup')
-            .send(users[1])
-            .then((res) => {
-                expect(res).to.have.status(401);
-                expect(res.body).to.be.an('object');
-                expect(res.body.error).to.equal('PhoneNumber already exists');
-                done();
-           }).catch(done);
-
-    });
-    */
-
     it('need to give all mandatory fields in signup', (done) => {
         chai.request(server)
             .post('/api/v1/auth/signup')
