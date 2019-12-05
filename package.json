@@ -4,23 +4,25 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "nyc --reporter=html --reporte=text mocha --require @babel/register ./server/test/**.spec.js --exit",
+    "test": " nyc --reporter=html --reporte=text mocha --require @babel/polyfill --require @babel/register ./server/test/*/**.spec.js --exit",
     "clean": "rimraf ./dist/",
     "serve": "nodemon --exec babel-node server.js",
-    "testdb": "babel-node ./server/src/v2/models/db.js",
     "start": "babel-node -- server.js",
     "lints": "eslint./",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
-    "local:coveralls": "nyc npm test && nyc report --reporter=text-lcov | coveralls"
+    "local:coveralls": "nyc npm test && nyc report --reporter=text-lcov | coveralls",
+    "database": "node server/src/v2/models/database.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@babel/core": "^7.7.4",
     "@babel/node": "^7.7.4",
+    "@babel/polyfill": "^7.7.0",
     "@babel/preset-env": "^7.7.4",
     "@babel/register": "^7.7.4",
     "@babel/runtime": "^7.7.2",
+    "body-parser": "^1.19.0",
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
     "coveralls": "^3.0.9",
@@ -34,6 +36,8 @@
     "mocha": "^6.2.2",
     "nodemon": "^2.0.1",
     "pg": "^7.14.0",
+    "pg-format": "^1.0.4",
+    "polyfill": "^0.1.0",
     "postgresql": "0.0.1"
   },
   "devDependencies": {
