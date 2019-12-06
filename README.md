@@ -32,6 +32,10 @@ This is a javascript application written in [ECMASCRIPT 6](https://en.wikipedia.
 * Postgres
 * Node
 
+## Testing
+Sever side tests - npm run test on the terminal while within the project root directory.
+
+Server side testing is achieved through use of chai-http, mocha and chai packages. chai-http is used to make requests to the api and mocha is the testing framework and chai is the exception library. They will both be installed when you run npm install and the tests will run when you do npm run test.
 
 ## Features
 Broadcaster App consists of the following features:
