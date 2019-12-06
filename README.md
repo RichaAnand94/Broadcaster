@@ -67,8 +67,33 @@ Broadcaster App consists of the following features:
 - Admins can disapprove a new/pending/ request
 - Admins can resolve a pending/disapproved request
 
+## Broadcaster Available endpoints
+
+| URL | HTTP Methohds | Description |
+| --- | --- | --- |
+| /api/v2/auth/signup | POST | Create new User |
+| /api/v2/auth/signin | POST | Login a user |
+| /api/v2/red-flags | POST | Create new red-flag record |
+| /api/v2/red-flags | GET | Can get all red-flags |
+| /api/v2/red-flags/:id | GET | Can get all red-flags by id |
+| /api/v2/red-flags/:id/location | PATCH | Can update red-flag location by id |
+| /api/v2/red-flags/:id/comment | PATCH | Can update red-flag comment by id |
+| /api/v2/red-flags/:id | DELETE | User can delete record by id |
+| /api/v2/interventions | POST | Create new intervention record |
+| /api/v2/interventions | GET | Can get all intervention |
+| /api/v2/inteventions/:id | GET | Can get all interventions by id |
+| /api/v2/interventions/:id/location | PATCH | Can update intervention location by id |
+| /api/v2/interventions/:id/comment | PATCH | Can update intervention comment by id |
+| /api/v2/interventions/:id | DELETE | User can delete record by id |
+| /api/v2/admin/red-flags | GET | Admin can get all red-flags |
+| /api/v2/admin/interventions | GET | Admin can get all interventions |
+| /api/v2/admin/red-flags/:id/status | PUT | Admin can change status of red-flags |
+| /api/v2/admin/interventions/:id/status | PUT | Admin can change status of interventions |
+
+
+
 ## Questions
-For more details contact richamee@gmail.com
+For more details contact richameo@gmail.com
 
 
 
