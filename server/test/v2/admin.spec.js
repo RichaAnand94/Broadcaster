@@ -44,4 +44,30 @@ describe('API endpoint /v2/admin', () => {
                 done();
             }).catch(done);
     });
+
+    it('need to get error while updating red-flags status with out passing status by admin', (done) => {
+        chai.request(server)
+            .put('/api/v2/admin/red-flags/1/status')
+            .set('token', `${userToken}`)
+            .send({})
+            .then((res) => {
+                expect(res).to.have.status(401);
+                expect(res.body).to.be.an('object');
+                expect(res.body.error).to.equal('Missing mandatory fields');
+                done();
+            }).catch(done);
+    });
+
+    it('need to get error while updating interventions status with out passing status by admin', (done) => {
+        chai.request(server)
+            .put('/api/v2/admin/interventions/1/status')
+            .set('token', `${userToken}`)
+            .send({})
+            .then((res) => {
+                expect(res).to.have.status(401);
+                expect(res.body).to.be.an('object');
+                expect(res.body.error).to.equal('Missing mandatory fields');
+                done();
+            }).catch(done);
+    });
 });

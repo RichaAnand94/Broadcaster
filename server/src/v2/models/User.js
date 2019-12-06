@@ -18,8 +18,8 @@ class User {
 
     async create(data) {
         const res = await client.query(
-            `INSERT INTO users(firstname, lastname, email, password, phone_number, role, created_on) values($1, $2, $3, $4, $5, 'user', $6) RETURNING *;`, 
-            [data.firstname, data.lastname, data.email, data.password, data.phone_number, new Date()]
+            `INSERT INTO users(firstName, lastName, email, password, phone_number, role, created_on) values($1, $2, $3, $4, $5, 'user', $6) RETURNING *;`, 
+            [data.firstName, data.lastName, data.email, data.password, data.phone_number, new Date()]
         )
         return res.rows[0];
     }

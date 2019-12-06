@@ -1,5 +1,5 @@
 
-const pg = require('pg');
+import pg from 'pg';
 
 const client = new pg.Client({
     user: 'postgres',
@@ -13,15 +13,15 @@ client.connect(err => {
     if (err) {
         console.error('connection error', err.stack)
     } else {
-        console.log('connected')
+        console.log('connected to the database')
     }
 });
 
 client.query(
     `CREATE TABLE IF NOT EXISTS users(
         id SERIAL PRIMARY KEY, 
-        firstname VARCHAR(40) not null, 
-        lastname VARCHAR(40) not null, 
+        firstName VARCHAR(40) not null, 
+        lastName VARCHAR(40) not null, 
         email VARCHAR(40) not null, 
         password VARCHAR(40) not null, 
         phone_number VARCHAR(15) not null, 
