@@ -1,21 +1,21 @@
 [
     {
-        "firstname": "admin",
-        "lastname": "admin",
+        "firstName": "admin",
+        "lastName": "admin",
         "email": "admin@broadcaster.com",
         "phone_number": "9876543210",
         "password": "admin"
     },
     {
-        "firstname": "test-user1",
-        "lastname": "test-user1",
+        "firstName": "test-user1",
+        "lastName": "test-user1",
         "email": "test-user1@gmail.com",
         "phone_number": "9876543210",
         "password": "password"
     },
     {
-        "firstname": "test-user2",
-        "lastname": "test-user2",
+        "firstName": "test-user2",
+        "lastName": "test-user2",
         "email": "test-user2@gmail.com",
         "password": "password"
     },
@@ -24,6 +24,6 @@
     },
     {
         "email": "test-user1@gmail.com",
-        "password": "passwor"
+        "password": "password"
     }
 ]

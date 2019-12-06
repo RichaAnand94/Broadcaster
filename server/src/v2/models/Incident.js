@@ -1,5 +1,6 @@
 import pg  from 'pg';
 import format from 'pg-format';
+//import { values } from './insert.values'
 //import { client } from './database';
 
 const client = new pg.Client({
@@ -16,7 +17,8 @@ class Incident {
 
     async create(data) {
         const res = await client.query(
-            `INSERT INTO incidents(title, comment, location, images, videos, type, status, created_on, created_by) values($1, $2, $3, $4, $5, $6, 'pending', $7, $8) RETURNING *;`, 
+            `INSERT INTO incidents(title, comment, location, images, videos, type, status, created_on, created_by) 
+            values($1, $2, $3, $4, $5, $6, 'pending', $7, $8) RETURNING *;`, 
             [data.title, data.comment, data.location, data.images, data.videos, data.type, new Date(), data.created_by]
         )
         return res.rows[0];
@@ -26,7 +28,7 @@ class Incident {
         const sql = format('SELECT * FROM incidents WHERE %I = $1', key);
         const res = await client.query(sql, [value]);
         return res.rows[0];
-    }
+    }   
 
     async findAll(type, created_by) {
         const sql = format('SELECT * FROM incidents WHERE type = $1 AND created_by = $2');

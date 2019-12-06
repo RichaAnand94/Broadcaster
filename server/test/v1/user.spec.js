@@ -8,22 +8,7 @@ import users from '../mock-data/users.json';
 chai.use(chaiHttp);
 
 describe('API endpoints /v1/auth/signup & /v1/auth/signin', () => {
-    before(() => { });
-
-    after(() => { });
-
-    it('should not signup with existing email', (done) => {
-        chai.request(server)
-            .post('/api/v1/auth/signup')
-            .send(users[0])
-            .then((res) => {
-                expect(res).to.have.status(401);
-                expect(res.body).to.be.an('object');
-                expect(res.body.error).to.equal('Email already exists');
-                done();
-            }).catch(done);
-    });
-
+    
     it('need to give all mandatory fields in signup', (done) => {
         chai.request(server)
             .post('/api/v1/auth/signup')

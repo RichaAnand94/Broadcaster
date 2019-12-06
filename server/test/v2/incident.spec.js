@@ -28,7 +28,7 @@ describe('API endpoints /v2/red-flags & /v2/interventions', () => {
             .set('token', `${userToken}`)
             .send(incidents[0])
             .then((res) => {
-                expect(res).to.have.status(401);
+                expect(res).to.have.status(400);
                 expect(res.body).to.be.an('object');
                 expect(res.body.error).to.equal('Missing mandatory fields');
                 done();
@@ -65,7 +65,7 @@ describe('API endpoints /v2/red-flags & /v2/interventions', () => {
             .set('token', `${userToken}`)
             .send({})
             .then((res) => {
-                expect(res).to.have.status(401);
+                expect(res).to.have.status(400);
                 expect(res.body).to.be.an('object');
                 expect(res.body.error).to.equal('Missing mandatory fields');
                 done();
@@ -78,7 +78,7 @@ describe('API endpoints /v2/red-flags & /v2/interventions', () => {
             .set('token', `${userToken}`)
             .send({})
             .then((res) => {
-                expect(res).to.have.status(401);
+                expect(res).to.have.status(400);
                 expect(res.body).to.be.an('object');
                 expect(res.body.error).to.equal('Missing mandatory fields');
                 done();
@@ -94,7 +94,7 @@ describe('API endpoints /v2/red-flags & /v2/interventions', () => {
             .set('token', `${userToken}`)
             .send(incidents[0])
             .then((res) => {
-                expect(res).to.have.status(401);
+                expect(res).to.have.status(400);
                 expect(res.body).to.be.an('object');
                 expect(res.body.error).to.equal('Missing mandatory fields');
                 done();
@@ -125,25 +125,13 @@ describe('API endpoints /v2/red-flags & /v2/interventions', () => {
             }).catch(done);
     });
 
-    it('need to get error while retrieving intervention based on wrong id', (done) => {
-        chai.request(server)
-            .get('/api/v2/interventions/1000')
-            .set('token', `${userToken}`)
-            .then((res) => {
-                expect(res).to.have.status(401);
-                expect(res.body).to.be.an('object');
-                expect(res.body.error).to.equal('No data found for id: 1000');
-                done();
-            }).catch(done);
-    });
-
     it('need to get error while updating intervention location with out passing location', (done) => {
         chai.request(server)
             .patch('/api/v2/interventions/1/location')
             .set('token', `${userToken}`)
             .send({})
             .then((res) => {
-                expect(res).to.have.status(401);
+                expect(res).to.have.status(400);
                 expect(res.body).to.be.an('object');
                 expect(res.body.error).to.equal('Missing mandatory fields');
                 done();
@@ -156,7 +144,7 @@ describe('API endpoints /v2/red-flags & /v2/interventions', () => {
             .set('token', `${userToken}`)
             .send({})
             .then((res) => {
-                expect(res).to.have.status(401);
+                expect(res).to.have.status(400);
                 expect(res.body).to.be.an('object');
                 expect(res.body.error).to.equal('Missing mandatory fields');
                 done();
